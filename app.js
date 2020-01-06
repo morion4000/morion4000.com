@@ -83,14 +83,12 @@ app.get('/robots.txt', function(req, res) {
 app.get('/', function(req, res) {
   var cookie_notice = show_cookie_notice(req);
 
-  get_coins(function(error, coins) {
-    res.render('index', {
-      title: 'morion4000',
-      description: 'Web and Blockchain developer.',
-      link: 'https://www.morion4000.com',
-      keywords: 'software, crypto, web',
-      cookie_notice: cookie_notice,
-    });
+  res.render('index', {
+    title: 'morion4000',
+    description: 'Web and Blockchain developer.',
+    link: 'https://www.morion4000.com',
+    keywords: 'software, crypto, web',
+    cookie_notice: cookie_notice,
   });
 });
 
@@ -106,8 +104,20 @@ app.get('/sitemap.xml', function(req, res) {
   });
 });
 
+app.get('/hello-world', function(req, res) {
+  res.redirect(301, 'https://www.morion4000.com/blog');
+});
+
+app.get('/django-settings-for-multiple-environments', function(req, res) {
+  res.redirect(301, 'https://www.morion4000.com/blog');
+});
+
 app.get('/about', function(req, res) {
-  res.redirect(301, 'https://www.morion4000.com/about2');
+  res.redirect(301, 'https://www.morion4000.com/services/maintenance');
+});
+
+app.get('/projects', function(req, res) {
+  res.redirect(301, 'https://www.morion4000.com/projects');
 });
 
 app.get('*', render_404);
