@@ -105,19 +105,19 @@ app.get('/sitemap.xml', function(req, res) {
 });
 
 app.get('/hello-world', function(req, res) {
-  res.redirect(301, 'https://www.morion4000.com/blog');
+  res.redirect(301, 'https://old.morion4000.com/hello-world');
 });
 
 app.get('/django-settings-for-multiple-environments', function(req, res) {
-  res.redirect(301, 'https://www.morion4000.com/blog');
+  res.redirect(301, 'https://old.morion4000.com/django-settings-for-multiple-environments');
 });
 
 app.get('/about', function(req, res) {
-  res.redirect(301, 'https://www.morion4000.com/services/maintenance');
+  res.redirect(301, 'https://old.morion4000.com/about');
 });
 
 app.get('/projects', function(req, res) {
-  res.redirect(301, 'https://www.morion4000.com/projects');
+  res.redirect(301, 'https://old.morion4000.com/projects');
 });
 
 app.get('*', render_404);
