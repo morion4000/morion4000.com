@@ -75,6 +75,10 @@ app.all(/.*/, function(req, res, next) {
   }
 });
 
+app.post('/send-mail', function(req, res) {
+  res.send('OK');
+});
+
 app.get('/robots.txt', function(req, res) {
   res.type('text/plain');
   res.send("User-agent: *\nDisallow:\nSitemap: https://www.morion4000.com/assets/sitemap.xml");
