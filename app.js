@@ -4,7 +4,12 @@ var crequest = require('cached-request')(request);
 var compression = require('compression');
 var mustacheExpress = require('mustache-express');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var app = express();
+var mailgun = require('mailgun-js')({
+  apiKey: process.env.MAILGUN_KEY,
+  domain: process.env.MAILGUN_DOMAIN
+});
 var port = process.env.PORT || 3003;
 
 function render_404(req, res) {
@@ -32,6 +37,7 @@ app.engine('html', mustacheExpress());
 
 app.use(compression());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // CORS
 app.use(function(req, res, next) {
@@ -76,7 +82,22 @@ app.all(/.*/, function(req, res, next) {
 });
 
 app.post('/send-mail', function(req, res) {
-  res.send('OK');
+  var response = 'OK';
+  var data = {
+    to: 'morion4000@gmail.com',
+    subject: 'New contact inquery'
+  };
+
+  if (req.body && req.body.message && req.body.email) {
+    data.text = req.body.message;
+    data.from = req.body.email;
+
+    mailgun.messages().send(data);
+  } else {
+    response = 'There was an error sending the email.';
+  }
+
+  res.send(response);
 });
 
 app.get('/robots.txt', function(req, res) {

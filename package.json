@@ -4,6 +4,7 @@
   "description": "",
   "author": "morion4000",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bower": "^1.8.4",
     "cached-request": "^1.1.4",
     "compression": "^1.7.3",
@@ -11,6 +12,7 @@
     "express": "^4.16.4",
     "express-cache-controller": "^1.1.0",
     "http-server": "^0.11.1",
+    "mailgun-js": "^0.22.0",
     "mustache-express": "^1.2.8",
     "request": "^2.88.0",
     "static-server": "^2.2.1"
