@@ -94,7 +94,7 @@ app.post('/send-mail', function(req, res) {
 
     mailgun.messages().send(data);
   } else {
-    response = 'There was an error sending the email';
+    response = 'There was an error sending the email.';
   }
 
   res.send(response);
