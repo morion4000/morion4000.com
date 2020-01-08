@@ -145,6 +145,10 @@ app.get('/projects', function(req, res) {
   res.redirect(301, 'https://old.morion4000.com/projects');
 });
 
+app.get('/tags', function(req, res) {
+  res.redirect(301, 'https://old.morion4000.com/tags');
+});
+
 app.get('*', render_404);
 
 app.listen(port, function() {
