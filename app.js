@@ -110,9 +110,9 @@ app.get('/', function(req, res) {
 
   res.render('index', {
     title: 'morion4000',
-    description: 'Web and Blockchain developer.',
+    description: 'Seasoned software developer with over ten years of experience in full-stack web development and systems architecture. I have worked on platforms ranging from mobile to web and desktop.',
     link: 'https://www.morion4000.com',
-    keywords: 'software, crypto, web',
+    keywords: 'developer, software, crypto, web, indie hacker',
     cookie_notice: cookie_notice,
   });
 });
