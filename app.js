@@ -17,7 +17,7 @@ function render_404(req, res) {
     title: 'Page not found',
     description: 'The page you requested couldn\'t be found.',
     link: 'https://www.morion4000.com',
-    keywords: 'software, crypto, web'
+    keywords: 'software, full stack, web, development, architecture, developer, crypto, web, indie hacker',
   });
 }
 
@@ -109,10 +109,10 @@ app.get('/', function(req, res) {
   var cookie_notice = show_cookie_notice(req);
 
   res.render('index', {
-    title: 'morion4000',
+    title: 'Web and Blockchain Developer - Ionut Moraru',
     description: 'Seasoned software developer with over ten years of experience in full-stack web development and systems architecture. I have worked on platforms ranging from mobile to web and desktop.',
     link: 'https://www.morion4000.com',
-    keywords: 'developer, software, crypto, web, indie hacker',
+    keywords: 'software, full stack, web, development, architecture, developer, crypto, web, indie hacker',
     cookie_notice: cookie_notice,
   });
 });
