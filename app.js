@@ -109,7 +109,7 @@ app.get('/', function(req, res) {
   var cookie_notice = show_cookie_notice(req);
 
   res.render('index', {
-    title: 'Adrian Moraru | Web and Blockchain Developer',
+    title: 'Ionut Adrian Moraru | Web and Blockchain Developer',
     description: 'Seasoned software developer with over ten years of experience in remote full stack web development and systems architecture. I have worked on platforms ranging from mobile to web and desktop.',
     link: 'https://www.morion4000.com',
     keywords: 'software, remote, full stack, web, developer, development, backend, frontend, architecture, blockchain, crypto, web, indie hacker',
