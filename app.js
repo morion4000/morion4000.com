@@ -149,6 +149,10 @@ app.get('/tags', function(req, res) {
   res.redirect(301, 'https://old.morion4000.com/tags');
 });
 
+app.get('/resume', function(req, res) {
+  res.redirect(301, 'https://www.morion4000.com/assets/pdf/Ionut_Moraru_Resume_2020.pdf');
+});
+
 app.get('*', render_404);
 
 app.listen(port, function() {
