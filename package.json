@@ -11,7 +11,7 @@
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "express-cache-controller": "^1.1.0",
-    "http-server": "^0.11.1",
+    "http-server": "^14.1.1",
     "mailgun-js": "^0.22.0",
     "mustache-express": "^1.2.8",
     "request": "^2.88.0",
