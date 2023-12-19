@@ -150,7 +150,7 @@ app.get('/tags', function(req, res) {
 });
 
 app.get('/resume', function(req, res) {
-  res.redirect(301, 'https://www.morion4000.com/assets/pdf/Ionut_Moraru_Resume_2021.pdf');
+  res.redirect(301, 'https://www.morion4000.com/assets/pdf/Ionut_Moraru_Resume.pdf');
 });
 
 app.get('*', render_404);
