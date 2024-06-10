@@ -67,20 +67,6 @@ app.use('/assets', express.static('assets'));
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
-app.all(/.*/, function(req, res, next) {
-  var host = req.header('host');
-
-  console.log(req.method, req.url);
-
-  if (host.match(/^www\..*/i) || host.match(/^localhost*/i)) {
-    next();
-  } else {
-    var url = req.url || '';
-
-    res.redirect(301, 'https://www.' + host + url);
-  }
-});
-
 app.post('/send-mail', function(req, res) {
   var response = 'OK';
   var data = {
